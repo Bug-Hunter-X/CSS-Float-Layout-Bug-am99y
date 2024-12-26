@@ -1,0 +1,21 @@
+The following CSS code fixes the layout issue by clearing the floats using a `clear: both;` rule on a sibling element or parent:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+
+/* Clearfix solution */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Or parent clear solution*/
+.parent {
+  overflow: hidden;
+}
+```
+By adding `.clearfix` class to the parent element and defining `.clearfix::after` rule the floats are correctly cleared. Alternatively, you can use `overflow: hidden;` on the parent container to achieve the same result.
