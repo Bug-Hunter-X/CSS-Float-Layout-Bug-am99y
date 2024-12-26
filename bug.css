@@ -1,0 +1,10 @@
+The following CSS code causes an unexpected layout issue in certain browsers:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+The issue arises because the `float` property can sometimes lead to unexpected behavior in the layout engine if the parent element is not properly cleared. This can cause the elements to overlap or render unexpectedly.
